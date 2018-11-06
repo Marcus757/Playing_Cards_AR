@@ -20,7 +20,7 @@ public class CloneChildOnClick : MonoBehaviour {
     {
         int childCount = transform.childCount;
         Transform instance =
-            Instantiate(prefab, child.localPosition, child.rotation);
+            Instantiate(prefab, child.localPosition, child.localRotation);
         instance.transform.SetParent(transform);
         instance.localScale = child.localScale;
         instance.localPosition = new Vector3(childCount * xOffset, 0, 0);
